@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    meta charset='utf-8'
+
+    = stylesheet_link_tag :application
+    = javascript_include_tag :application
+
+    title
+      | Wiselinks example
+    = csrf_meta_tag
+    
+  body
+    .navbar.navbar-fixed-top.navbar-inverse
+      .navbar-inner
+        .container
+          ul.nav
+            li{ class=(params[:controller] == 'home' && params[:action] == 'about' ? 'active' : '') }
+              = link_to 'Wiselinks', root_path
+            li{ class=(params[:controller] == 'home' && params[:action] == 'catalog' ? 'active' : '') }
+              = link_to 'Catalog', catalog_path
+
+    .container
+      .row
+        = yield

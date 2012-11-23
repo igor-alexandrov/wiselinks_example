@@ -77,38 +77,6 @@ class Filter < Virtual
     self.class.key
   end
 
-  # The filter parameters in a human-readable format:
-  # { "Start Date" => "01/01/2012", "End Date" => "12/31/2012", ... }
-  # Parameter names should be defined in models.en.yml
-  def formatted_params
-    @formatted_params ||= self.class.filter_attributes.inject([]) do |list,field|
-      value = self.send field
-      data_type = self.class.columns.find { |c| c.name.to_s == field.to_s }.try(:type)
-
-      if value.blank?
-        nil
-      elsif self.respond_to?("formatted_param_#{field}")
-        text = self.send("formatted_param_#{field}")
-      elsif data_type == :date || data_type == :datetime
-        text = value.present? ? I18n.l(value) : nil
-      elsif data_type == :boolean
-        text = { true => 'Yes', false => 'No' }[value]
-        if value == true
-          text = 'Yes'
-        elsif value == false
-          text = 'No'
-        else
-          text = nil
-        end
-      else
-        text = value
-      end
-
-      list << [ self.class.human_attribute_name(field), text ] if text.present?
-      list
-    end
-  end
-
 protected
   def add_condition(query, condition)
     query.nil? ? condition : query & condition

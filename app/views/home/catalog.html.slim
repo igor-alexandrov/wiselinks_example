@@ -1,10 +1,12 @@
-.container-fluid
-  .row-fluid
-    .span2
+h1
+  | Sample Catalog
+
+.row-fluid
+  - if @proposals.any?
+    .span3
       p
         | Filter
-
-    .span10      
+    .span9
       table.table.table-striped
         thead
           th Title
@@ -26,3 +28,8 @@
                 = proposal.country
               td
                 = number_to_currency(proposal.price)
+  - else
+    .span8.offset2
+      .alert
+        strong 
+          | We don't have any products yet!

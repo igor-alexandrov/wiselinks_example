@@ -4,29 +4,25 @@
       p
         | Filter
 
-    .span10
-      p
-        | Products
+    .span10      
+      table.table.table-striped
+        thead
+          th Title
+          th Description
+          th Category
+          th Country
+          th Price
 
-      .table.table-striped
-        table
-          thead
-            th Title
-            th Description
-            th Category
-            th Country
-            th Price
-
-          tbody
-            - @proposals.each do |proposal|
-              tr id="proposal_#{proposal.id}"
-                td
-                  = proposal.title
-                td
-                  = proposal.description
-                td
-                  = proposal.category
-                td
-                  = proposal.country
-                td
-                  = number_to_currency(proposal.price)
+        tbody
+          - @proposals.each do |proposal|
+            tr id="proposal_#{proposal.id}"
+              td
+                = proposal.title
+              td
+                = proposal.description
+              td
+                = proposal.category
+              td
+                = proposal.country
+              td
+                = number_to_currency(proposal.price)

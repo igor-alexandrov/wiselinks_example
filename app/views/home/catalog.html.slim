@@ -1,11 +1,39 @@
-.container-fluid
-  .row-fluid
-    .span2
+h1
+  | Sample Catalog
+
+.row-fluid
+  - if @proposals.any?
+    .span3
       p
         | Filter
-
-    .span10
-      p
-        | Products
-        = render :partial => 'home/proposals_list'
       
+        | Products
+    .span9
+     .table.table-striped
+      table
+        thead
+          th
+          th Title
+          th Brand
+          th Rating
+          th Price
+
+        tbody
+          - @proposals.each do |proposal|
+            tr id="proposal_#{proposal.id}"
+              td
+                img src=proposal.image_url
+              td
+                = proposal.title
+              td
+                = proposal.brand
+              td
+                = proposal.rating
+              td
+                = number_to_currency(proposal.price)
+            
+  - else
+    .span8.offset2
+      .alert
+        strong 
+          | We don't have any products yet!

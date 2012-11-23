@@ -7,6 +7,11 @@ GIT
       formtastic
       rails (>= 3.1.0)
 
+PATH
+  remote: ../wiselinks
+  specs:
+    wiselinks (0.0.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -140,3 +145,4 @@ DEPENDENCIES
   sqlite3
   uglifier (>= 1.0.3)
   will_paginate-bootstrap (~> 0.2.1)
+  wiselinks!

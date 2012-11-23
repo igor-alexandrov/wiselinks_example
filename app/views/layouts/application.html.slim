@@ -16,10 +16,9 @@ html
         .container
           ul.nav
             li{ class=(params[:controller] == 'home' && params[:action] == 'about' ? 'active' : '') }
-              = link_to 'Wiselinks', root_path
+              = link_to 'About Wiselinks', root_path, 'data-push' => true
             li{ class=(params[:controller] == 'home' && params[:action] == 'catalog' ? 'active' : '') }
-              = link_to 'Catalog', catalog_path
+              = link_to 'Sample Catalog', catalog_path, 'data-push' => true
 
     .container
-      .row
-        = yield
+      = yield

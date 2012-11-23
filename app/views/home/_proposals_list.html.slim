@@ -1,0 +1,19 @@
+.table.table-striped
+  table
+    thead
+      th Title
+      th Brand
+      th Rating
+      th Price
+
+    tbody
+      - @proposals.each do |proposal|
+        tr id="proposal_#{proposal.id}"
+          td
+            = proposal.title
+          td
+            = proposal.brand
+          td
+            = proposal.rating
+          td
+            = number_to_currency(proposal.price)

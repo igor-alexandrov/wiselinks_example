@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def catalog
-    @proposals = Proposal.all
+    @proposals = Proposals::Search.new(params).results
   end
 
   def about

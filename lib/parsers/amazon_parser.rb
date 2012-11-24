@@ -1,6 +1,6 @@
 require 'open-uri'
 
-class AmazonParser
+class Parsers::AmazonParser
 
   attr_accessor :url
   attr_reader :doc
@@ -33,7 +33,7 @@ class AmazonParser
     proposal
   end
 
-  # Parses for attributes
+  # Parsing attributes
 
   def parse_title(item)
     title_item = item.xpath('.//*[@class="zg_title"]').first
@@ -42,7 +42,7 @@ class AmazonParser
 
   def parse_brand(item)
     brand_item = item.xpath('.//*[@class="zg_byline"]').first
-    brand_item.content.delete('by ') if brand_item.present?
+    brand_item.content.gsub(/^by /, '') if brand_item.present?
   end
 
   def parse_rating(item)

@@ -5,6 +5,7 @@ gem 'sqlite3'
 gem 'slim'
 gem 'jquery-rails'
 
+gem 'will_paginate'
 gem 'will_paginate-bootstrap', '~> 0.2.1'
 
 gem 'formtastic', '~> 2.1.1'

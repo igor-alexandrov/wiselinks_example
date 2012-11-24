@@ -1,0 +1,32 @@
+= will_paginate proposals, :renderer => BootstrapPagination::Rails
+
+- if proposals.any?
+.table.table-striped
+  table
+    thead
+      th
+      th Title
+      th Brand
+      th Rating
+      th Price
+
+    tbody
+      - proposals.each do |proposal|
+        tr id="proposal_#{proposal.id}"
+          td
+            img src=proposal.image_url
+          td
+            = proposal.title
+          td
+            = proposal.brand
+          td
+            = proposal.rating
+          td
+            = number_to_currency(proposal.price)
+- else
+  .span8.offset2
+    .alert
+      strong 
+        | We don't have any products yet!
+
+= will_paginate proposals, :renderer => BootstrapPagination::Rails

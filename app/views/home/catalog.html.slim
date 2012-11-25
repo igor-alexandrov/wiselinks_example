@@ -5,7 +5,9 @@ h1
     .span3
       p
         | Filter
-      
-        | Products
+        = render :partial => 'proposals/filter'
+
     .span9
-      = render :partial => 'home/proposals_list', :locals => { :proposals => @proposals }
+      p
+        | Products
+        = render :partial => 'proposals/table', :locals => { :proposals => @proposals }

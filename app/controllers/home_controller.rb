@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
   def catalog
-    @proposals = Proposals::Search.new(params).results.paginate(:page => params[:page], :per_page => 10)
+    @filter = Proposals::Search.new(params)
+    @proposals = @filter.results.page(params[:page])
   end
 
   def about

@@ -1,0 +1,18 @@
+= form_for @filter, :as => :filter, :url => catalog_path, :id => "proposals_filter", :builder => Filters::FormBuilder, :html => { :method => :get } do |f|
+  
+  = f.label :title
+  = f.text_field :title
+
+  = f.label :brand
+  = f.select :brand, Proposal.pluck(:brand).uniq.sort, :include_blank => true
+
+  = f.label :rating
+  = f.text_field :rating_min, :class => 'input-small', :placeholder => 'Minimum'
+  = f.text_field :rating_max, :class => 'input-small', :placeholder => 'Maximum'
+
+  = f.label :price
+  = f.currency_field :price_min, :class => 'input-small', :placeholder => 'Minimum'
+  = f.currency_field :price_max, :class => 'input-small', :placeholder => 'Maximum'
+
+  = f.submit 'Search', :class => 'btn btn-small btn-primary'
+  = link_to 'Clear Filter', catalog_path, :class => 'btn btn-small'

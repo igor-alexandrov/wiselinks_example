@@ -16,7 +16,7 @@ gem 'formtastic-bootstrap', '~> 1.1.2',
     :git => 'git://github.com/cgunther/formtastic-bootstrap.git',
     :branch => 'bootstrap2-rails3-2-formtastic-2-1'
 
-gem 'wiselinks', :path => '../wiselinks'
+# gem 'wiselinks', :path => '../wiselinks'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

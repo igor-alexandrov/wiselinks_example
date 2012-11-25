@@ -9,7 +9,6 @@ With the parser you can get the following fields:
 * Price
 * Image Url
 
-==
 
 Creating a new parser:
 

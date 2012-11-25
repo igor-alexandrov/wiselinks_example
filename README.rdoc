@@ -9,6 +9,8 @@ With the parser you can get the following fields:
 * Price
 * Image Url
 
+==
+
 Creating a new parser:
 
   Parsers::AmazonParser.new('http://www.amazon.com/gp/bestsellers/electronics/1266092011/ref=sv_e_1')

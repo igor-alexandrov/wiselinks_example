@@ -8,6 +8,9 @@ gem 'jquery-rails'
 gem 'will_paginate'
 gem 'will_paginate-bootstrap', '~> 0.2.1'
 
+gem 'nokogiri'
+gem 'squeel'
+
 gem 'formtastic', '~> 2.1.1'
 gem 'formtastic-bootstrap', '~> 1.1.2',
     :git => 'git://github.com/cgunther/formtastic-bootstrap.git',
@@ -28,7 +31,6 @@ group :assets do
 end
 
 gem 'jquery-rails'
-gem 'nokogiri'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

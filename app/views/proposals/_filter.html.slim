@@ -1,4 +1,4 @@
-= form_for @filter, :as => :filter, :url => catalog_path, :id => "proposals_filter", :builder => Filters::FormBuilder, :html => { :method => :get } do |f|
+= form_for @filter, :as => :filter, :url => catalog_path, :id => "proposals_filter", :builder => Filters::FormBuilder, :html => { :method => :get, 'data-push' => 'partial', 'data-target' => '@proposals' } do |f|
   
   = f.label :title
   = f.text_field :title

@@ -1,4 +1,5 @@
-#= require zepto
+#= require jquery
+#= require jquery.role
 #= require wiselinks
 
 class App

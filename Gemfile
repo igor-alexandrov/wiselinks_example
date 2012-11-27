@@ -12,6 +12,7 @@ end
 
 gem 'slim'
 gem 'jquery-rails'
+gem 'role-rails'
 
 gem 'will_paginate'
 gem 'will_paginate-bootstrap', '~> 0.2.1'

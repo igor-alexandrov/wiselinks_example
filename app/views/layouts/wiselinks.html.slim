@@ -1,0 +1,11 @@
+.navbar.navbar-fixed-top.navbar-inverse
+  .navbar-inner
+    .container
+      ul.nav
+        li{ class=(params[:controller] == 'home' && params[:action] == 'about' ? 'active' : '') }
+          = link_to 'About Wiselinks', root_path, 'data-push' => true
+        li{ class=(params[:controller] == 'home' && params[:action] == 'catalog' ? 'active' : '') }
+          = link_to 'Sample Catalog', catalog_path, 'data-push' => true
+
+.container
+  = yield

@@ -1,8 +1,80 @@
 @import "bootstrap"
-@import "formtastic-bootstrap"
-@import "font-awesome"
-@import "font-awesome-ie7"
 
 body
   padding-top: 60px
+  min-width: 980px
 
+// layout
+.layout
+  position: relative
+  margin: 0 auto
+  width: 100%
+  min-width: 980px
+  
+.wrapper
+  position: relative
+  margin: 0 auto
+  padding: 0 40px
+  +clearfix
+
+.columns__center
+  float: left
+  margin: 0
+  width: 100%
+
+.columns_center__inner
+  padding-left: 260px
+
+.columns__left
+  width: 240px
+  margin: 0 0 0 -100%
+  float: left
+
+// proposals
+ul.catalog
+  margin: 0
+  list-style: none
+  
+.catalog__item
+  position: relative
+  display: inline-block
+  margin: 0 8% 65px 0
+  padding-top: 135px
+  width: 160px
+  min-height: 125px
+  vertical-align: top
+
+.proposal__title
+  display: block
+  margin: 0 0 15px 0
+  line-height: 125%
+  font-size: $baseFontSize
+  font-weight: normal
+  color: $linkColor
+
+.proposal__brand, .proposal__price
+  margin: 0
+  text-align: right
+  white-space: nowrap
+
+.proposal__brand
+  margin-bottom: 7px
+  color: #9d9d9d
+  font-size: $baseFontSize - 1
+
+.proposal__price strong
+  padding: 3px 8px
+  text-align: center
+  font-style: italic
+  font-size: $baseFontSize + 3
+  font-weight: normal
+  background: #fef32a
+  +border-radius(8px)
+
+.proposal__picture
+  position: absolute
+  overflow: hidden
+  top: 0
+  left: 0
+  height: 120px
+  width: 160px

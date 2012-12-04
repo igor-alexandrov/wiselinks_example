@@ -3,7 +3,7 @@ class HomeController < ApplicationController
     @filter = Proposals::Search.new(params)
     @proposals = @filter.results.page(params[:page])
 
-    render :partial => 'proposals/table', :locals => { :proposals => @proposals } if request.headers['X-Slide'] == 'partial'
+    render :partial => 'proposals/table', :locals => { :proposals => @proposals } if wiselinks_partial_request?
   end
 
   def about

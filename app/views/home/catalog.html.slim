@@ -3,14 +3,10 @@
 h1
   | Sample Catalog
 
-.row-fluid
-    .span3
-      p
-        | Filter
-        = render :partial => 'proposals/filter'
+.row
+  .columns__center
+    .columns_center__inner{ role='proposals' }
+      = render :partial => 'proposals/table', :locals => { :proposals => @proposals }
 
-    .span9
-      p
-        | Products
-      div{ role='proposals' }  
-        = render :partial => 'proposals/table', :locals => { :proposals => @proposals }
+  .columns__left
+    = render :partial => 'proposals/filter'

@@ -66,7 +66,7 @@ class Filters::FormBuilder < ActionView::Helpers::FormBuilder
   def currency_field(method, options = {})
     options.reverse_merge!({
       :class => '',
-      :size => 11
+      :size => 5
     })
     options[:class] += ' currency' 
     text_field(method, options)

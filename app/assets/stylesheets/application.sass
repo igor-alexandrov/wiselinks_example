@@ -31,11 +31,11 @@ body
   float: left
 
 // proposals
-ul.catalog
+ul.proposals
   margin: 0
   list-style: none
   
-.catalog__item
+.proposals__item
   position: relative
   display: inline-block
   margin: 0 8% 65px 0
@@ -44,7 +44,7 @@ ul.catalog
   min-height: 125px
   vertical-align: top
 
-.proposal__title
+.proposals__item__title
   display: block
   margin: 0 0 15px 0
   line-height: 125%
@@ -52,17 +52,17 @@ ul.catalog
   font-weight: normal
   color: $linkColor
 
-.proposal__brand, .proposal__price
+.proposals__item__brand, .proposals__item__price
   margin: 0
   text-align: right
   white-space: nowrap
 
-.proposal__brand
+.proposals__item__brand
   margin-bottom: 7px
   color: #9d9d9d
   font-size: $baseFontSize - 1
 
-.proposal__price strong
+.proposals__item__price strong
   padding: 3px 8px
   text-align: center
   font-style: italic
@@ -71,10 +71,13 @@ ul.catalog
   background: #fef32a
   +border-radius(8px)
 
-.proposal__picture
+.proposals__item__picture
   position: absolute
   overflow: hidden
   top: 0
   left: 0
   height: 120px
   width: 160px
+
+.controls-row [class*="span"]
+  margin: 0

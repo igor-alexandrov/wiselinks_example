@@ -6,13 +6,15 @@
   = f.label :brand
   = f.select :brand, Proposal.pluck(:brand).uniq.sort, :include_blank => true
 
-  = f.label :rating
-  = f.text_field :rating_min, :class => 'input-small', :placeholder => 'Minimum'
-  = f.text_field :rating_max, :class => 'input-small', :placeholder => 'Maximum'
-
+  / = f.label :rating
+  / = f.text_field :rating_min, :class => 'input-small', :placeholder => 'Minimum'
+  / = f.text_field :rating_max, :class => 'input-small', :placeholder => 'Maximum'
+  
   = f.label :price
-  = f.currency_field :price_min, :class => 'input-small', :placeholder => 'Minimum'
-  = f.currency_field :price_max, :class => 'input-small', :placeholder => 'Maximum'
+  .controls.controls-row
+    = f.currency_field :price_min, :class => 'span1', :placeholder => 'Min'
+    = f.currency_field :price_max, :class => 'span1', :placeholder => 'Max'
 
-  = f.submit 'Search', :class => 'btn btn-small btn-primary'
-  = link_to 'Clear Filter', catalog_path, :class => 'btn btn-small'
+  .form-actions
+    =' f.submit 'Search', :class => 'btn btn-small btn-primary'
+    = link_to 'Clear Filter', catalog_path, :class => 'btn btn-small'

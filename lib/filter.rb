@@ -28,13 +28,13 @@ class Filter < Virtual
   end
 
   def per_page
-    250
+    12
   end
 
   def results
     s = self.scope.where(self.find_criteria)  
     s = s.accessible_by(self.user.ability, self.permit_action) if self.user.present?
-    s
+    s.page(self.page).per_page(self.per_page)
   end
 
   def to_json

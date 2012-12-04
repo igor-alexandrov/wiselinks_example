@@ -1,22 +1,21 @@
 = will_paginate proposals, :renderer => BootstrapPagination::Rails
 
 - if proposals.any?
-  ul.catalog
+  ul.proposals
     - proposals.each do |proposal|
-      li.catalog__item
-      
-        .proposal__brand
+      li.proposals__item
+        .proposals__item__brand
           = proposal.brand
 
-        strong.proposal__title
+        strong.proposals__item__title
           = proposal.title
          
         - if proposal.price.present?
-          .proposal__price
+          .proposals__item__price
             strong
               = number_to_currency(proposal.price)
 
-        .proposal__picture
+        .proposals__item__picture
           = image_tag proposal.image_url, :width => 160, :alt => proposal.title
 
 - else

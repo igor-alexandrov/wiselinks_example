@@ -1,12 +1,13 @@
 - set_title("Sample Catalog")
 
-h1
-  | Sample Catalog
-
 .row
   .columns__center
-    .columns_center__inner{ role='proposals' }
-      = render :partial => 'proposals/table', :locals => { :proposals => @proposals }
+    .columns_center__inner
+      h1
+        | Sample Catalog
+      
+      div{ role='proposals' }
+        = render :partial => 'proposals/table', :locals => { :proposals => @filter.results }
 
   .columns__left
     = render :partial => 'proposals/filter'

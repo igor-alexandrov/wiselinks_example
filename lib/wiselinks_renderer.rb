@@ -1,6 +1,6 @@
 # coding: UTF-8
 
-class WillPaginateRenderer < WillPaginate::ActionView::LinkRenderer  
+class WiselinksRenderer < WillPaginate::ActionView::LinkRenderer  
   def url(page)
     @base_url_params ||= begin
       url_params = merge_get_params(default_url_params)

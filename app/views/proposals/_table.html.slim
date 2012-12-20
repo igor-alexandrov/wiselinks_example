@@ -1,4 +1,4 @@
-= will_paginate proposals, :renderer => BootstrapPagination::Rails
+= will_paginate proposals, :renderer => WiselinksRenderer, :link_attributes => { 'data-push' => 'partial', 'data-target' => '@proposals' }
 
 - if proposals.any?
   ul.proposals

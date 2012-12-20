@@ -1,4 +1,4 @@
-= will_paginate proposals, :renderer => BootstrapPagination::Rails
+= will_paginate proposals, :link_attributes => { 'data-push' => true }, :renderer => WillPaginateRenderer
 
 - if proposals.any?
   ul.proposals
@@ -24,5 +24,4 @@
       strong 
         | We don't have any proposals yet!
 
-
-= will_paginate proposals, :renderer => BootstrapPagination::Rails
+= will_paginate proposals, :link_attributes => { 'data-push' => true }, :renderer => WillPaginateRenderer

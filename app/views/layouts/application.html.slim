@@ -13,7 +13,7 @@ html
     = csrf_meta_tag
     
   body
-    .layout role='layout'
+    .layout{ role='content' }
       .navbar.navbar-fixed-top.navbar-inverse
         .navbar-inner
           .wrapper
@@ -27,3 +27,5 @@ html
         = yield
 
     ul.console{ role="wiseconsole" }
+    a.clear_console{ href="javascript:void(null)" role="clear_wiseconsole" }
+      | Clear console

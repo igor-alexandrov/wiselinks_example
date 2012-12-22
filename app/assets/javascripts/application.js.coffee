@@ -12,22 +12,27 @@ class App
       window.console = document.console = new Console
 
     @wiselinks = new Wiselinks()
+    
+    wiseconsole = $(document).find('@wiseconsole')
 
     $(document).off('page:loading').on(
       'page:loading'
-      (event, url, target, render) ->        
+      (event, url, target, render) -> 
+        wiseconsole.append("<li>>>> Wiselinks loading: #{url} to #{target} within '#{render}'</li>")
         console.log("Wiselinks loading: #{url} to #{target} within '#{render}'")
     )
 
     $(document).off('page:success').on(
       'page:success'
-      (event, data, status) ->        
+      (event, data, status) ->  
+        wiseconsole.append("<li>>>> Wiselinks status: '#{status}'</li>")
         console.log("Wiselinks status: '#{status}'")
     )
 
     $(document).off('page:error').on(
       'page:error'
-      (event, data, status) ->        
+      (event, data, status) ->  
+        wiseconsole.append("<li>>>> Wiselinks status: '#{status}'</li>")
         console.log("Wiselinks status: '#{status}'")
     )
 

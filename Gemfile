@@ -26,8 +26,8 @@ gem 'formtastic-bootstrap', '~> 1.1.2',
     :branch => 'bootstrap2-rails3-2-formtastic-2-1'
 
 
-gem 'wiselinks', :path => '../wiselinks'
-# gem 'wiselinks', '0.2.0', :path => "vendor/gems/wiselinks-0.2.0"
+# gem 'wiselinks', :path => '../wiselinks'
+gem 'wiselinks', '0.3.0', :path => "vendor/gems/wiselinks-0.3.0"
 
 
 group :assets do

@@ -11,6 +11,7 @@ html
         = yield(:title)
         
     = csrf_meta_tag
+    = wiselinks_meta_tag
     
   body
     .layout{ role='content' }
@@ -27,5 +28,5 @@ html
         = yield
 
     ul.console{ role="console" }
-    a.clear_console{ href="javascript:void(null)" role="clear_console" }
+    a.btn.clear_console{ href="javascript:void(null)" role="clear_console" }
       | Clear console

@@ -1,4 +1,4 @@
-WiselinksExample::Application.configure do
+Dummy::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
   # In the development environment your application's code is reloaded on
@@ -29,11 +29,9 @@ WiselinksExample::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   config.active_record.auto_explain_threshold_in_seconds = 0.5
 
-  # # Do not compress assets
-  # config.assets.compress = false
+  # Do not compress assets
+  config.assets.compress = false
 
-  # # Expands the lines which load the assets
-  # config.assets.debug = true
-
-  
+  # Expands the lines which load the assets
+  config.assets.debug = true
 end

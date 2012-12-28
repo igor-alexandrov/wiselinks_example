@@ -8,9 +8,9 @@ GIT
       rails (>= 3.1.0)
 
 PATH
-  remote: vendor/gems/wiselinks-0.3.2
+  remote: ../wiselinks
   specs:
-    wiselinks (0.3.2)
+    wiselinks (0.3.4)
 
 GEM
   remote: https://rubygems.org/
@@ -158,4 +158,4 @@ DEPENDENCIES
   uglifier (>= 1.0.3)
   will_paginate
   will_paginate-bootstrap (~> 0.2.1)
-  wiselinks (= 0.3.2)!
+  wiselinks!

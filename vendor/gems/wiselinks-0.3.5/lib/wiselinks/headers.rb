@@ -18,7 +18,10 @@ module Wiselinks
           options[:partial] ||= action_name
         else
           Wiselinks.log("processing template request")
-          options[:layout] = self.wiselinks_layout        
+          
+          if Wiselinks.options[:layout] != false
+            options[:layout] = self.wiselinks_layout 
+          end
         end
 
         if Wiselinks.options[:assets_digest].present?
@@ -32,9 +35,9 @@ module Wiselinks
     end
 
     def wiselinks_title(value)
-      if self.request.wiselinks?
+      if self.request.wiselinks? && value.present?
         Wiselinks.log("title: #{value}")        
-        response.headers['X-Title'] = value 
+        response.headers['X-Title'] = URI.encode(value)
       end
     end    
 

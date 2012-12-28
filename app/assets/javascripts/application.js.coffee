@@ -4,7 +4,8 @@
 
 class App
   constructor: () ->
-    @wiselinks = new Wiselinks($('@content'))
+    @wiselinks = new Wiselinks($('@content'), html4: true)
+
     console = $(document).find('@console')
     clear_console = $(document).find('@clear_console')
 

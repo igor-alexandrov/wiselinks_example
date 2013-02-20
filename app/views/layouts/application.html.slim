@@ -19,7 +19,7 @@ html
         .navbar-inner
           .wrapper
             ul.nav
-              li{ class=(params[:controller] == 'home' && params[:action] == 'about' ? 'active' : '') }
+              li{ class=(params[:controller] == 'home' && params[:action] == 'index' ? 'active' : '') }
                 = link_to 'About Wiselinks', root_path, 'data-push' => true
               li{ class=(params[:controller] == 'home' && params[:action] == 'catalog' ? 'active' : '') }
                 = link_to 'Sample Catalog', catalog_path, 'data-push' => true

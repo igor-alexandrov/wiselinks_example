@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.9'
+gem 'rails', '3.2.12'
 
 group :production do
   gem "pg", '~>0.13.2'
@@ -11,7 +11,7 @@ group :development, :test do
 end
 
 gem 'slim'
-gem 'jquery-rails'
+gem 'jquery-rails', '2.1.4'
 gem 'role-rails'
 
 gem 'will_paginate'
@@ -26,9 +26,12 @@ gem 'formtastic-bootstrap', '~> 1.1.2',
     :branch => 'bootstrap2-rails3-2-formtastic-2-1'
 
 
-# gem 'wiselinks', :path => '../wiselinks'
-gem 'wiselinks', '0.4.2'
+gem 'remotipart'
 
+gem 'wiselinks', :path => '../wiselinks'
+
+
+# gem 'wiselinks', '0.4.2'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -41,20 +44,3 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
 end
-
-gem 'jquery-rails'
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'debugger'

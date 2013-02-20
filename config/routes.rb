@@ -1,4 +1,6 @@
 WiselinksExample::Application.routes.draw do
-  match '/catalog' => 'home#catalog'
-  root :to => 'home#about'
+  get 'catalog' => 'home#catalog'
+  get 'redirect' => 'home#redirect'
+  
+  root :to => 'home#index'
 end

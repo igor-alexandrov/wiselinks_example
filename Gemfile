@@ -30,7 +30,7 @@ gem 'remotipart'
 
 # gem 'wiselinks', :path => '../wiselinks'
 
-gem 'wiselinks', '0.5.1'
+gem 'wiselinks', '0.5.2'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

@@ -28,10 +28,9 @@ gem 'formtastic-bootstrap', '~> 1.1.2',
 
 gem 'remotipart'
 
-gem 'wiselinks', :path => '../wiselinks'
+# gem 'wiselinks', :path => '../wiselinks'
 
-
-# gem 'wiselinks', '0.4.2'
+gem 'wiselinks', '0.5.0'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

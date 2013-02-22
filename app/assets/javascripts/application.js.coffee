@@ -22,8 +22,8 @@ class App
         console.append("<li class='loading'>>>> Wiselinks loading: #{url} to <strong>#{$target.selector}</strong> within '<strong>#{render}</strong>'</li>")
     )
 
-    $(document).off('page:redirect').on(
-      'page:redirect'
+    $(document).off('page:redirected').on(
+      'page:redirected'
       (event, $target, render, url) -> 
         console.append("<li class='redirected'>>>> Wiselinks redirected to: #{url}</li>")        
     )

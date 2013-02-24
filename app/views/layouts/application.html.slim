@@ -22,8 +22,11 @@ html
               li{ class=(params[:controller] == 'home' && params[:action] == 'index' ? 'active' : '') }
                 = link_to 'About Wiselinks', root_path, 'data-push' => true
               li{ class=(params[:controller] == 'home' && params[:action] == 'catalog' ? 'active' : '') }
-                = link_to 'Sample Catalog', catalog_path, 'data-push' => true
-
+                = link_to 'Sample Catalog', catalog_path, 'data-push' => true              
+            - if wiselinks_version.present?
+              span.version
+                | build with wiselinks-
+                = wiselinks_version
       .wrapper
         = yield
 

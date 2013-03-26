@@ -8,4 +8,8 @@ module ApplicationHelper
   def wiselinks_version    
     Gem.loaded_specs['wiselinks'].version.to_s rescue nil
   end
+
+  def rails_version    
+    Gem.loaded_specs['rails'].version.to_s rescue nil
+  end
 end

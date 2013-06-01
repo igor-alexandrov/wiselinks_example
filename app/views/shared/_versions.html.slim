@@ -1,0 +1,20 @@
+- if rails_version.present? || wiselinks_version.present?
+  span.version
+    ' built with:
+    ul
+      - if wiselinks_version.present?
+        li
+          = link_to 'https://github.com/igor-alexandrov/wiselinks', :target => '_blank' do
+            | wiselinks-
+            = wiselinks_version
+
+      - if rails_version.present?
+        li
+          = link_to 'https://github.com/rails/rails', :target => '_blank' do
+            | rails-
+            = rails_version
+      li
+        = link_to 'http://jquery.com', :target => '_blank', :role => 'jquery-version' do
+          | jquery-
+          javascript:
+            $('@jquery-version').append(jQuery.fn.jquery);

@@ -10,8 +10,8 @@ group :development, :test do
   gem 'sqlite3'
 end
 
-gem 'slim'
-gem 'jquery-rails', '2.1.4'
+gem 'slim', '1.3.9'
+gem 'jquery-rails'#, '2.1.4'
 gem 'role-rails'
 
 gem 'will_paginate'
@@ -30,7 +30,7 @@ gem 'remotipart'
 
 # gem 'wiselinks', :path => '../wiselinks'
 
-gem 'wiselinks', '0.5.6'
+gem 'wiselinks', '0.6.0'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

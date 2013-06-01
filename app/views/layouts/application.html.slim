@@ -18,26 +18,8 @@ html
       .navbar.navbar-fixed-top.navbar-inverse
         .navbar-inner
           .wrapper
-            ul.nav
-              li{ class=(params[:controller] == 'home' && params[:action] == 'index' ? 'active' : '') }
-                = link_to 'About Wiselinks', root_path, 'data-push' => true
-              li{ class=(params[:controller] == 'home' && params[:action] == 'catalog' ? 'active' : '') }
-                = link_to 'Sample Catalog', catalog_path, 'data-push' => true              
-            - if rails_version.present? || wiselinks_version.present?
-              span.version
-                ' built with:
-                ul
-                  - if wiselinks_version.present?
-                    li
-                      = link_to 'https://github.com/igor-alexandrov/wiselinks', :target => '_blank' do
-                        | wiselinks-
-                        = wiselinks_version
-
-                  - if rails_version.present?
-                    li
-                      = link_to 'https://github.com/rails/rails', :target => '_blank' do
-                        | rails-
-                        = rails_version
+            = render :partial => 'shared/navigation'
+            = render :partial => 'shared/versions'
                   
       .wrapper
         = yield

@@ -1,4 +1,4 @@
-.row-fluid.margin-bottom-40
+.row-fluid.margin-bottom-20
   .control-group
     .controls
       = label_tag :include_blank_url_params, :class => 'checkbox' do
@@ -11,7 +11,7 @@
         =' check_box_tag :optimize_url_params, 1, true, :class => 'checkbox', :role => 'optimize_url_params'
         | Optimize URL params
 
-  .control-group
+  .control-group.margin-top-10
     .controls
       span.help-block
         | Read more about <code>data-include-blank-url-params</code> attribute and <code>data-optimize-url-params</code> in <a href='https://github.com/igor-alexandrov/wiselinks' target='_blank'>Wiselinks README</a>.

@@ -1,20 +1,41 @@
-= form_for @filter, :as => :filter, :url => catalog_path, :id => "proposals_filter", :builder => Filters::FormBuilder, :html => { :method => :get, 'data-push' => 'partial', 'data-target' => '@proposals' } do |f|
-  
-  = f.label :title
-  = f.text_field :title
+.row-fluid.margin-bottom-40
+  .control-group
+    .controls
+      = label_tag :include_blank_url_params, :class => 'checkbox' do
+        =' check_box_tag :include_blank_url_params, 1, false, :class => 'checkbox', :role => 'include_blank_url_params'
+        | Include blank URL params
 
-  = f.label :brand
-  = f.select :brand, Proposal.pluck(:brand).uniq.sort, :include_blank => true
+  .control-group
+    .controls
+      = label_tag :optimize_url_params, :class => 'checkbox' do
+        =' check_box_tag :optimize_url_params, 1, true, :class => 'checkbox', :role => 'optimize_url_params'
+        | Optimize URL params
 
-  / = f.label :rating
-  / = f.text_field :rating_min, :class => 'input-small', :placeholder => 'Minimum'
-  / = f.text_field :rating_max, :class => 'input-small', :placeholder => 'Maximum'
-  
-  = f.label :price
-  .controls.controls-row
-    = f.currency_field :price_min, :class => 'span1', :placeholder => 'Min'
-    = f.currency_field :price_max, :class => 'span1', :placeholder => 'Max'
+  .control-group
+    .controls
+      span.help-block
+        | Read more about <code>data-include-blank-url-params</code> attribute and <code>data-optimize-url-params</code> in <a href='https://github.com/igor-alexandrov/wiselinks' target='_blank'>Wiselinks README</a>.
+
+
+
+= form_for @filter, :as => :filter, :url => catalog_path, :id => "proposals_filter", :builder => Filters::FormBuilder, :html => { :method => :get, 'data-push' => 'partial', 'data-target' => '@proposals', :role => 'form' } do |f|
+
+  .control-group
+    = f.label :title, :class => "control-label"
+    .controls
+      = f.text_field :title
+
+  .control-group
+    = f.label :brand
+    .controls
+      = f.select :brand, Proposal.pluck(:brand).uniq.sort, :include_blank => true
+
+  .control-group
+    = f.label :price
+    .controls.controls-row
+      = f.currency_field :price_min, :class => 'span1', :placeholder => 'Min'
+      = f.currency_field :price_max, :class => 'span1', :placeholder => 'Max'
 
   .form-actions
-    =' f.submit 'Search', :class => 'btn btn-small btn-primary'
-    = link_to 'Clear Filter', catalog_path, :class => 'btn btn-small'
+    =' f.submit 'Search', :class => 'btn btn-primary'
+    = link_to 'Clear', catalog_path, :class => 'btn', 'data-push' => true

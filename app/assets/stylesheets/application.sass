@@ -1,4 +1,5 @@
-@import "bootstrap"
+@import 'bootstrap'
+@import '_helpers'
 
 body
   padding-top: 60px
@@ -23,10 +24,10 @@ body
   width: 100%
 
 .columns_center__inner
-  padding-left: 260px
+  padding-left: 360px
 
 .columns__left
-  width: 240px
+  width: 340px
   margin: 0 0 0 -100%
   float: left
 
@@ -102,6 +103,8 @@ ul.proposals
       &:first-child
         margin-left: 0
 
+// Console
+
 .console
   position: fixed
   overflow-y: auto
@@ -109,7 +112,7 @@ ul.proposals
   left: 0
   padding: 10px 0
   margin: 0
-  height: 160px
+  height: 120px
   width: 100%
   list-style: none
   font-size: 12px
@@ -128,4 +131,14 @@ ul.proposals
 .clear_console
   position: fixed
   right: 30px
-  bottom: 140px
+  bottom: 100px
+
+// Override Bootstrap
+a, input, select
+  outline: none!important
+
+// Fix for Firefox submit tag height
+body:not(:-moz-handler-blocked)
+  input.btn
+    height: $baseLineHeight !important
+    -moz-box-sizing: content-box  

@@ -1,6 +1,7 @@
 #= require jquery
 #= require jquery.role
 #= require wiselinks
+#= require _filter
 
 class App
   constructor: () ->

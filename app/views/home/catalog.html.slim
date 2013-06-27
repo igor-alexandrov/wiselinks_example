@@ -1,4 +1,11 @@
-- set_title("Sample Catalog")
+- set_title("Sample Catalog")  
+
+javascript:
+  $(document).ready(function() {
+    var $container = $('@filter');
+    var controller = new Filter($container);
+    $container.data('controller', controller);
+  });
 
 .row
   .columns__center
@@ -9,5 +16,5 @@
       div{ role='proposals' }
         = render :partial => 'proposals/table', :locals => { :proposals => @filter.results }
 
-  .columns__left
+  .columns__left{ role='filter' }
     = render :partial => 'proposals/filter'

@@ -30,16 +30,13 @@ gem 'remotipart'
 
 # gem 'wiselinks', :path => '../wiselinks'
 
-gem 'wiselinks', '0.6.4'
+gem 'wiselinks', '0.7.0'
 
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-  gem 'bootstrap-sass', '~> 2.1.0.0'
+  gem 'sass-rails'
+  gem 'coffee-rails'
+  gem 'bootstrap-sass'
   gem 'font-awesome-sass-rails', '~> 2.0.0.0'
-  
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
 
-  gem 'uglifier', '>= 1.0.3'
+  gem 'uglifier'
 end

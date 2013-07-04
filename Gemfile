@@ -9,7 +9,6 @@ end
 
 group :development, :test do
   gem 'sqlite3'
-  gem 'thin'
 end
 
 gem 'slim', '1.3.9'

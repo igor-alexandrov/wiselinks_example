@@ -9,10 +9,10 @@ html
     title
       - if content_for?(:title)
         = yield(:title)
-        
+
     = csrf_meta_tag
-    / = wiselinks_meta_tag
-    
+    = wiselinks_meta_tag
+
   body
     .layout{ role='content' }
       .navbar.navbar-fixed-top.navbar-inverse
@@ -20,7 +20,7 @@ html
           .wrapper
             = render :partial => 'shared/navigation'
             = render :partial => 'shared/versions'
-                  
+
       .wrapper
         = yield
 

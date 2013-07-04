@@ -9,6 +9,7 @@ end
 
 group :development, :test do
   gem 'sqlite3'
+  gem 'thin'
 end
 
 gem 'slim', '1.3.9'
@@ -31,7 +32,7 @@ gem 'remotipart'
 
 # gem 'wiselinks', :path => '../wiselinks'
 
-gem 'wiselinks', '0.7.0'
+gem 'wiselinks', '0.7.3'
 
 group :assets do
   gem 'sass-rails'

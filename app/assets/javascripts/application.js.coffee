@@ -19,30 +19,29 @@ class App
 
     $(document).off('page:loading').on(
       'page:loading'
-      (event, $target, render, url) -> 
+      (event, $target, render, url) ->
         console.append("<li class='loading'>>>> Wiselinks loading: #{url} to <strong>#{$target.selector}</strong> within '<strong>#{render}</strong>'</li>")
     )
 
     $(document).off('page:redirected').on(
       'page:redirected'
-      (event, $target, render, url) -> 
-        console.append("<li class='redirected'>>>> Wiselinks redirected to: #{url}</li>")        
+      (event, $target, render, url) ->
+        console.append("<li class='redirected'>>>> Wiselinks redirected to: #{url}</li>")
     )
 
     $(document).off('page:done').on(
       'page:done'
-      (event, $target, status, url, data) ->  
+      (event, $target, status, url, data) ->
         console.append("<li class='status'>>>> Wiselinks status: '<strong>#{status}</strong>'</li>")
         console.scrollTop(console.find('li:last').offset().top)
     )
 
     $(document).off('page:fail').on(
       'page:fail'
-      (event, $target, status, url, error) ->  
+      (event, $target, status, url, error) ->
         console.append("<li class='status'>>>> Wiselinks status: '<strong>#{status}</strong>'</li>")
         console.scrollTop(console.find('li:last').offset().top)
     )
 
 $(document).ready ->
   window.app = new App
-  

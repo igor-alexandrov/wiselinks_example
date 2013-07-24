@@ -134,7 +134,7 @@ GEM
     will_paginate (3.0.4)
     will_paginate-bootstrap (0.2.3)
       will_paginate (>= 3.0.3)
-    wiselinks (1.0.0)
+    wiselinks (1.1.1)
 
 PLATFORMS
   ruby
@@ -158,4 +158,4 @@ DEPENDENCIES
   uglifier
   will_paginate
   will_paginate-bootstrap (~> 0.2.1)
-  wiselinks (= 1.0.0)
+  wiselinks (= 1.1.1)
